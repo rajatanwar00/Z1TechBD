@@ -80,10 +80,10 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
 async function postToX(imagePath) {
     try {
-      const mediaId = await twitterClient.v1.uploadMedia(imagePath); 
+      const mediaId = await rwClient.v1.uploadMedia(imagePath); 
   
       
-      await twitterClient.v1.tweet("Here is my resized image!", { media_ids: [mediaId] });
+      await rwClient.v1.tweet("Here is my resized image!", { media_ids: [mediaId] });
   
       console.log("✅ Image posted successfully!");
     } catch (error) {
