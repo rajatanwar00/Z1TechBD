@@ -37,10 +37,10 @@ const sizes = [
 
 
 const twitterClient = new TwitterApi({
-    appKey: process.env.TWITTER_API_KEY,
-    appSecret: process.env.TWITTER_API_SECRET,
-    accessToken: process.env.TWITTER_ACCESS_TOKEN,
-    accessSecret: process.env.TWITTER_ACCESS_SECRET,
+    appKey: process.env.API_KEY,
+    appSecret: process.env.API_SECRET,
+    accessToken: process.env.ACCESS_TOKEN,
+    accessSecret: process.env.ACCESS_SECRET,
   });
   
   const rwClient = twitterClient.readWrite;
